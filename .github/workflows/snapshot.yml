@@ -1,0 +1,20 @@
+name: Snapshot Build
+
+on:
+  workflow_dispatch:
+
+  push:
+    branches:
+      - main
+
+env:
+  version_status: "beta"
+
+jobs:
+  build:
+    uses: ryderbelserion/ryderbelserion/.github/workflows/build.yml@main
+
+    secrets:
+      webhook: ${{ secrets.CS_WEBHOOK }}
+      modrinth_token: ${{ secrets.MODRINTH_TOKEN }}
+      hangar_token: ${{ secrets.HANGAR_KEY }}

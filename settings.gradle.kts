@@ -6,6 +6,6 @@ pluginManagement {
     }
 }
 
-rootProject.name = "GradleTemplate"
+rootProject.name = "CrazyScheduler"
 
 include("paper")

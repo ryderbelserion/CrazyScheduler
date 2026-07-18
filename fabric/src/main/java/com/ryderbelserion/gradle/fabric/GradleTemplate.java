@@ -1,4 +1,4 @@
-package com.ryderbelserion.gradle.fabric;
+package com.ryderbelserion.crazyscheduler.fabric;
 
 import net.fabricmc.api.DedicatedServerModInitializer;
 import org.slf4j.Logger;
