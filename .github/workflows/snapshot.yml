@@ -14,6 +14,10 @@ jobs:
   build:
     uses: ryderbelserion/ryderbelserion/.github/workflows/build.yml@main
 
+    with:
+      branch: main
+      publish: modrinth
+
     secrets:
       webhook: ${{ secrets.CS_WEBHOOK }}
       modrinth_token: ${{ secrets.MODRINTH_TOKEN }}
