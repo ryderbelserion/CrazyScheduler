@@ -58,7 +58,7 @@ tasks {
         )
 
         with(copySpec {
-            include("*paper-plugin.yml", "*fabric.mod.json", "*version.json")
+            include("*paper-plugin.yml", "*version.json")
 
             from("src/main/resources") {
                 expand(inputs.properties)
