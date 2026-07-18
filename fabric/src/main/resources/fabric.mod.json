@@ -1,0 +1,29 @@
+{
+  "schemaVersion" : 1,
+  "id" : "${id}",
+  "version" : "${version}",
+  "name" : "${artifact}",
+  "description" : "${description}",
+  "authors" : [
+    "ryderbelserion"
+  ],
+  "contact" : {
+    "homepage" : "https://github.com/ryderbelserion/GradleTemplate",
+    "sources" : "https://github.com/ryderbelserion/GradleTemplate",
+    "issues" : "https://github.com/ryderbelserion/GradleTemplate/issues"
+  },
+  "license" : "MIT",
+  "environment" : "server",
+  "entrypoints" : {
+    "client" : [],
+    "server": [
+      "com.ryderbelserion.gradle.fabric.GradleTemplate"
+    ]
+  },
+  "depends" : {
+    "fabricloader" : ">=${fabricloader}",
+    "minecraft" : "${minecraft}",
+    "java" : ">=21",
+    "fabric-api" : "*"
+  }
+}

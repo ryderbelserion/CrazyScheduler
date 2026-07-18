@@ -1,0 +1,8 @@
+name: '${artifact}'
+main: '${group}.${artifact}'
+
+version: '${version}'
+api-version: '${minecraft}'
+description: '${description}'
+
+folia-supported: true
