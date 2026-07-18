@@ -1,0 +1,18 @@
+# Support: https://discord.gg/ktxCyUd7Ny
+# Github: https://github.com/ryderbelserion
+#
+# Issues: https://github.com/ryderbelserion/CrazyCrates/issues
+# Features: https://github.com/ryderbelserion/CrazyCrates/issues
+#
+# List of all sounds: https://mudkipdev.github.io/minecraft-sound-explorer/
+root:
+  # Sends anonymous statistics to TBD
+  toggle-metrics: true
+  # This option will tell the plugin to send all messages as action bars or messages in chat.
+  #
+  # send_message -> sends messages in chat.
+  # send_actionbar -> sends messages in actionbar.
+  #
+  message-state: "send_message"
+  # The prefix used in commands
+  command_prefix: " <gradient:gold:yellow>CrazyScheduler</gradient> | "

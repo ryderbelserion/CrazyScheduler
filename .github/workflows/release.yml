@@ -15,6 +15,7 @@ jobs:
 
     with:
       branch: main
+      publish: modrinth
 
     secrets:
       webhook: ${{ secrets.BUILD_WEBHOOK }}
