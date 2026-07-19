@@ -19,6 +19,15 @@ jobs:
         run: echo ${{ env.version_status }}
       - name: Commit Status
         run: echo ${{ env.GIT_PREVIOUS_SUCCESSFUL_COMMIT }}
+
+      - name: Setup Java
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: 25
+
+      - name: Verify Gradle Wrapper
+        run: gradle debug
   #build:
   #  uses: ryderbelserion/ryderbelserion/.github/workflows/build.yml@main
 

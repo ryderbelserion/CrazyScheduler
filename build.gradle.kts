@@ -50,6 +50,12 @@ val releaseType = rootProject.ext.get("release_type").toString()
 val color = rootProject.property("${releaseType.lowercase()}_color").toString()
 val isRelease = releaseType.equals("release", true)
 
+tasks.register("debug") {
+    description = "debug task"
+
+    println(System.getenv("version_status"))
+}
+
 feather {
     workingDirectory = rootProject.rootDir.toPath()
 
