@@ -98,7 +98,7 @@ feather {
                                 "*Click below to download!*",
                                 "<:modrinth:1115307870473420800> [Modrinth](https://modrinth.com/plugin/${rootProject.name.lowercase()}/version/${rootProject.version})",
                                 "",
-                                "<:business:1130886601002713138> [Jenkins](https://ci.crazycrew.us/job/${rootProject.name}/)"
+                                "<:business:1527739792358637598> [Jenkins](https://ci.crazycrew.us/job/${rootProject.name}/lastSuccessfulBuild/)"
                             ).convertList()
                         )
 
