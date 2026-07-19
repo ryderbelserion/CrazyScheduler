@@ -53,7 +53,7 @@ val isRelease = releaseType.equals("release", true)
 tasks.register("debug") {
     description = "debug task"
 
-    println(System.getenv("version_status"))
+    println(releaseType + isRelease)
 }
 
 feather {
