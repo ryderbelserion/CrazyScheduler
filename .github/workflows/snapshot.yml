@@ -9,39 +9,17 @@ on:
 
 env:
   GIT_PREVIOUS_SUCCESSFUL_COMMIT: ${{ github.event.before }}
-  version_status: "beta"
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    uses: ryderbelserion/ryderbelserion/.github/workflows/build.yml@main
 
-    steps:
-      - uses: actions/checkout@v7
+    with:
+      platforms: modrinth
+      status: "beta"
+      branch: main
 
-      - name: Version Status
-        run: echo ${{ env.version_status }}
-      - name: Commit Status
-        run: echo ${{ env.GIT_PREVIOUS_SUCCESSFUL_COMMIT }}
-
-      - name: Setup Java
-        uses: actions/setup-java@v5
-        with:
-          distribution: temurin
-          java-version: 25
-
-      - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@v6
-
-      - name: Verify Gradle Wrapper
-        run: gradle debug
-  #build:
-  #  uses: ryderbelserion/ryderbelserion/.github/workflows/build.yml@main
-
-    #with:
-    #  branch: main
-    #  publish: modrinth
-
-    #secrets:
-    #  webhook: ${{ secrets.CS_WEBHOOK }}
-    #  modrinth_token: ${{ secrets.MODRINTH_TOKEN }}
-    #  hangar_token: ${{ secrets.HANGAR_KEY }}
+    secrets:
+      webhook: ${{ secrets.CS_WEBHOOK }}
+      modrinth_token: ${{ secrets.MODRINTH_TOKEN }}
+      hangar_token: ${{ secrets.HANGAR_KEY }}
