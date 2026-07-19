@@ -8,8 +8,6 @@ plugins {
     `java-plugin`
 }
 
-rootProject.version = rootProject.property("plugin_version") as String
-
 val git = feather.getBuilder()
 
 tasks {

@@ -12,7 +12,7 @@ jobs:
     uses: ryderbelserion/ryderbelserion/.github/workflows/build.yml@main
 
     with:
-      platforms: modrinth
+      platforms: "modrinth"
       status: "beta"
       branch: main
 
