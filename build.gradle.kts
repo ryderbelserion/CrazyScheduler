@@ -3,7 +3,6 @@ import utils.updateMarkdown
 
 plugins {
     id("modrinth-plugin")
-    id("hangar-plugin")
 
     `java-plugin`
 }
