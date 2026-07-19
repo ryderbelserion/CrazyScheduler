@@ -12,14 +12,21 @@ env:
   version_status: "beta"
 
 jobs:
-  build:
-    uses: ryderbelserion/ryderbelserion/.github/workflows/build.yml@main
+  log-message:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Version Status
+        run: echo ${{ env.version_status }}
+      - name: Commit Status
+        run: echo ${{ env.GIT_PREVIOUS_SUCCESSFUL_COMMIT }}
+  #build:
+  #  uses: ryderbelserion/ryderbelserion/.github/workflows/build.yml@main
 
-    with:
-      branch: main
-      publish: modrinth
+    #with:
+    #  branch: main
+    #  publish: modrinth
 
-    secrets:
-      webhook: ${{ secrets.CS_WEBHOOK }}
-      modrinth_token: ${{ secrets.MODRINTH_TOKEN }}
-      hangar_token: ${{ secrets.HANGAR_KEY }}
+    #secrets:
+    #  webhook: ${{ secrets.CS_WEBHOOK }}
+    #  modrinth_token: ${{ secrets.MODRINTH_TOKEN }}
+    #  hangar_token: ${{ secrets.HANGAR_KEY }}
