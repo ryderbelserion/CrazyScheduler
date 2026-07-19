@@ -12,8 +12,9 @@ env:
   version_status: "beta"
 
 jobs:
-  log-message:
+  build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Version Status
         run: echo ${{ env.version_status }}
@@ -30,7 +31,7 @@ jobs:
         uses: gradle/actions/setup-gradle@v6
 
       - name: Verify Gradle Wrapper
-        run: gradle debug
+        run: gradle build
   #build:
   #  uses: ryderbelserion/ryderbelserion/.github/workflows/build.yml@main
 
